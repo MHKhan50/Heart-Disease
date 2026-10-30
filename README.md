@@ -3,6 +3,7 @@
 [![tests](https://github.com/MHKhan50/heart-disease/actions/workflows/tests.yml/badge.svg)](https://github.com/MHKhan50/heart-disease/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Kaggle](https://img.shields.io/badge/Kaggle-notebook-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/muzammalhussain11/heart-disease-v2-leakage-audit-hospital-split)
 
 **Status:** V2 experiments complete (October 2026). Results below.
 
@@ -155,9 +156,8 @@ lowest in the oldest group, where disease prevalence is highest (73%).
 
 ## Run it
 
-**On Kaggle (recommended):** open
-[`notebooks/heart_disease_v2.ipynb`](notebooks/heart_disease_v2.ipynb) as a
-Kaggle notebook, set Accelerator = None and Internet = On, add the dataset
+**On Kaggle (recommended):** copy the [published notebook](https://www.kaggle.com/code/muzammalhussain11/heart-disease-v2-leakage-audit-hospital-split)
+(or import [`notebooks/heart_disease_v2.ipynb`](notebooks/heart_disease_v2.ipynb)), set Accelerator = None and Internet = On, add the dataset
 `johnsmith88/heart-disease-dataset` (used only for the leakage audit), then
 *Save & Run All*. CPU is enough.
 
