@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Heart Disease Prediction V2: Leakage Audit and Cross-Hospital Validation"
+authors:
+  - family-names: Hussain
+    given-names: Muzammal
+repository-code: "https://github.com/MHKhan50/heart-disease"
+license: MIT
+version: 0.1.0
+date-released: 2026-10-30

@@ -1,5 +1,9 @@
 # Heart Disease Prediction V2: Leakage Audit and Cross-Hospital Validation
 
+[![tests](https://github.com/MHKhan50/heart-disease/actions/workflows/tests.yml/badge.svg)](https://github.com/MHKhan50/heart-disease/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 **Status:** in progress
 
 A rebuild of my 2022 heart disease project (V1), which compared Random
@@ -76,6 +80,11 @@ data/          data instructions (data itself is not committed)
 ## Disclaimer
 
 Research code only. Not a medical device and not for diagnosis.
+
+## Citation
+
+See [`CITATION.cff`](CITATION.cff). Please also cite the original data source:
+Detrano R, Janosi A, Steinbrunn W, Pfisterer M, et al. International application of a new probability algorithm for the diagnosis of coronary artery disease. *American Journal of Cardiology* 64(5):304-310, 1989.
 
 ## License
 
