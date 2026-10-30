@@ -40,19 +40,37 @@ the source hospital kept on every row. See [`data/README.md`](data/README.md).
 Missing values (notably `ca` and `thal` at some sites) are imputed inside the
 cross-validation folds, with missing-indicator features, rather than dropped.
 
+## Run it
+
+**On Kaggle (recommended):** open
+[`notebooks/heart_disease_v2.ipynb`](notebooks/heart_disease_v2.ipynb) as a
+Kaggle notebook, set Accelerator = None and Internet = On, add the dataset
+`johnsmith88/heart-disease-dataset` (used only for the leakage audit), then
+*Save & Run All*. CPU is enough.
+
+**Locally:**
+
+```bash
+pip install -e ".[models,dev]"
+python scripts/run_all.py --out results            # downloads the UCI files
+python scripts/run_all.py --out results --quick    # fast smoke run
+pytest                                             # offline tests on synthetic data
+```
+
+Outputs: `site_summary.csv`, `leakage_audit.csv`, `internal_cv_summary.csv`,
+`loso_auroc_all.csv`, `loso_auroc_core.csv`, `loso_all_metrics.csv`,
+`subgroups.csv` and figures (internal vs external AUROC, calibration on
+held-out hospitals, SHAP).
+
 ## Repository structure
 
 ```
-notebooks/   Kaggle / Jupyter notebooks
-src/         reusable code (data loading, evaluation)
-results/     tables and figures
-data/        data instructions (data itself is not committed)
-```
-
-## Setup
-
-```bash
-pip install -r requirements.txt
+src/heartv2/   package: data loading, models, evaluation, plots
+notebooks/     Kaggle notebook
+scripts/       run_all.py (all experiments from the command line)
+tests/         offline tests using synthetic data in the UCI file format
+results/       tables and figures
+data/          data instructions (data itself is not committed)
 ```
 
 ## Disclaimer

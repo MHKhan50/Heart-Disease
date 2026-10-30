@@ -16,3 +16,9 @@ data/*
 .DS_Store
 .vscode/
 .idea/
+
+# Build artefacts
+*.egg-info/
+build/
+dist/
+.pytest_cache/
