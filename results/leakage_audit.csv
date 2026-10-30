@@ -1,0 +1,3 @@
+data,n_rows,test_rows_seen_in_train,accuracy_mean,accuracy_sd,auroc_mean,auroc_sd
+as shared (with duplicates),1025,0.971,0.995,0.008,0.999,0.002
+duplicates removed,302,0.0,0.833,0.038,0.909,0.032

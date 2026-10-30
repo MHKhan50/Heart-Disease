@@ -82,7 +82,8 @@ def _candidates(seed: int) -> dict:
         from catboost import CatBoostClassifier
 
         c["CatBoost"] = lambda: CatBoostClassifier(
-            iterations=500, learning_rate=0.05, depth=4, verbose=0, random_seed=seed)
+            iterations=500, learning_rate=0.05, depth=4, verbose=0, random_seed=seed,
+            allow_writing_files=False)
     except ImportError:
         pass
     try:
