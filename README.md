@@ -3,6 +3,7 @@
 [![tests](https://github.com/MHKhan50/heart-disease/actions/workflows/tests.yml/badge.svg)](https://github.com/MHKhan50/heart-disease/actions/workflows/tests.yml)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23833910.svg)](https://doi.org/10.5281/zenodo.23833910)
 [![Kaggle](https://img.shields.io/badge/Kaggle-notebook-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/code/muzammalhussain11/heart-disease-v2-leakage-audit-hospital-split)
 
 **Status:** V2 experiments complete (October 2026). Results below.
@@ -192,7 +193,9 @@ Research code only. Not a medical device and not for diagnosis.
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff). Please also cite the original data source:
+Hussain, M. (2026). *Heart Disease Prediction V2: Leakage Audit and Leave-One-Hospital-Out Validation* (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.23833910
+
+See also [`CITATION.cff`](CITATION.cff). Please also cite the original data source:
 Detrano R, Janosi A, Steinbrunn W, Pfisterer M, et al. International application of a new probability algorithm for the diagnosis of coronary artery disease. *American Journal of Cardiology* 64(5):304-310, 1989.
 
 ## License

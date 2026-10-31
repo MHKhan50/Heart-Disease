@@ -4,6 +4,7 @@ title: "Heart Disease Prediction V2: Leakage Audit and Cross-Hospital Validation
 authors:
   - family-names: Hussain
     given-names: Muzammal
+doi: 10.5281/zenodo.23833910
 repository-code: "https://github.com/MHKhan50/heart-disease"
 license: MIT
 keywords:
