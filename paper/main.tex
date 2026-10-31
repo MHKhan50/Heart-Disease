@@ -12,6 +12,12 @@
 \usepackage{xurl}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
 
+% Let the paper compile from paper/ or from the repository root (e.g. Overleaf GitHub import)
+\makeatletter
+\def\input@path{{./}{paper/}}
+\makeatother
+\graphicspath{{./}{paper/}}
+
 \newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
 
 \title{Duplicates, Hospital Shift and Missingness Shortcuts:\\
