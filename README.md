@@ -8,6 +8,8 @@
 
 **Status:** V2 experiments complete (October 2026). Results below.
 
+**Paper (preprint)**: *Duplicates, Hospital Shift and Missingness Shortcuts: A Leakage Audit and Leave-One-Hospital-Out Re-evaluation of Machine Learning on the UCI Heart Disease Data*, [doi:10.5281/zenodo.23841456](https://doi.org/10.5281/zenodo.23841456). PDF and LaTeX source in [`paper/`](paper/).
+
 A rebuild of my 2022 heart disease project (V1), which compared Random
 Forest, XGBoost and a neural network on a merged heart disease dataset and
 reported accuracy only. V2 asks a stricter question: how well do these models
