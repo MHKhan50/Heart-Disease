@@ -1,0 +1,39 @@
+{
+  "upload_type": "software",
+  "title": "Heart Disease Prediction V2: Leakage Audit and Leave-One-Hospital-Out Validation (code, results and preprint)",
+  "creators": [
+    {
+      "name": "Hussain, Muzammal",
+      "affiliation": "Masmatix Innovations Ltd"
+    }
+  ],
+  "description": "<p>The UCI heart disease data are among the most widely used benchmarks for clinical machine learning, and published accuracies on them often exceed 90%. We re-evaluate six models, logistic regression, random forest, XGBoost, LightGBM, CatBoost and the tabular foundation model TabPFN, under three protocols. First, a leakage audit of the 1,025-row merged file widely redistributed on Kaggle shows that it contains only 302 distinct records: after a random 80/20 split, 97.1% of test rows have an exact copy in the training set, and a random forest reaches 0.995 accuracy and 0.999 AUROC, against 0.833 and 0.909 once duplicates are removed. Second, on the original four-hospital data (918 patients after de-duplication), repeated stratified cross-validation places all six models within 0.882–0.907 AUROC, with logistic regression (0.904) level with TabPFN (0.907). Third, leave-one-hospital-out validation reveals a consistent drop at the VA Long Beach site to 0.70–0.73 AUROC for every model, while Cleveland and Hungary transfer well; the Switzerland site, with 8 patients without disease, is too small to evaluate. Calibration does not transfer: the observed-to-expected ratio ranges from 0.65–0.79 in Hungary to 1.31–1.48 in Switzerland. SHAP analysis shows that missing-value indicators, notably for cholesterol, which is never recorded at the Swiss site, rank among the most important inputs, indicating that models partly learn the source hospital rather than patient physiology. Removing the three attributes that are mostly missing outside Cleveland lowered performance at Cleveland and raised it slightly at Switzerland and VA, although intervals overlap. We release code, tests and a reproducible notebook.</p><p>This record archives the full pipeline (Python package and tests), the Kaggle notebook, all result tables and figures, and the preprint draft (paper/main.pdf).</p>",
+  "license": "MIT",
+  "keywords": [
+    "machine learning",
+    "data leakage",
+    "external validation",
+    "calibration",
+    "shortcut learning",
+    "heart disease",
+    "TabPFN",
+    "clinical prediction"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://www.kaggle.com/code/muzammalhussain11/heart-disease-v2-leakage-audit-hospital-split",
+      "relation": "isSupplementedBy",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://masmatixinnovations.co.uk/insights/heart-disease-v2-leakage-hospitals.html",
+      "relation": "isDescribedBy",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.24432/C52P4X",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ]
+}
