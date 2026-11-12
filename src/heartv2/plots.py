@@ -6,6 +6,9 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
+# House palette: blue, yellow, red, light green
+PALETTE = ["#1F4E9C", "#E3A800", "#C8102E", "#5FA65A"]
+
 
 def internal_vs_external(cv_folds: pd.DataFrame, loso: pd.DataFrame, path=None):
     """Mean internal CV AUROC next to each held-out hospital's AUROC with 95% CI."""
@@ -20,7 +23,7 @@ def internal_vs_external(cv_folds: pd.DataFrame, loso: pd.DataFrame, path=None):
         s = loso[loso["held_out"] == site].set_index("model").reindex(models)
         err = np.vstack([s["auroc"] - s["auroc_lo"], s["auroc_hi"] - s["auroc"]])
         ax.bar(x - 0.4 + width * (i + 1.5), s["auroc"], width, yerr=err, capsize=2,
-               label=f"External: {site}")
+               label=f"External: {site}", color=PALETTE[i % len(PALETTE)])
     ax.set_xticks(x, models, rotation=20, ha="right")
     ax.set_ylabel("AUROC")
     ax.set_ylim(0.4, 1.0)
@@ -37,7 +40,7 @@ def calibration_curves(df: pd.DataFrame, preds: dict, model: str, n_bins: int = 
     """Reliability diagram per held-out hospital for one model (quantile bins)."""
     fig, ax = plt.subplots(figsize=(5, 5))
     ax.plot([0, 1], [0, 1], color="0.6", ls="--", lw=1)
-    for site in df["site"].unique():
+    for i, site in enumerate(df["site"].unique()):
         if (site, model) not in preds:
             continue
         y = df.loc[df["site"] == site, "target"].to_numpy()
@@ -46,7 +49,7 @@ def calibration_curves(df: pd.DataFrame, preds: dict, model: str, n_bins: int = 
         b = np.clip(np.digitize(p, q[1:-1]), 0, len(q) - 2)
         xs = [p[b == k].mean() for k in range(len(q) - 1) if (b == k).any()]
         ys = [y[b == k].mean() for k in range(len(q) - 1) if (b == k).any()]
-        ax.plot(xs, ys, marker="o", label=site)
+        ax.plot(xs, ys, marker="o", label=site, color=PALETTE[i % len(PALETTE)])
     ax.set_xlabel("Predicted probability")
     ax.set_ylabel("Observed frequency")
     ax.set_title(f"Calibration on held-out hospitals: {model}")
