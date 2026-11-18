@@ -78,7 +78,9 @@ def shap_summary(df: pd.DataFrame, factory, features, path=None, seed: int = 42)
     if values.ndim == 3:
         values = values[:, :, 1]
     plt.figure()
-    shap.summary_plot(values, X, show=False, max_display=15)
+    from matplotlib.colors import LinearSegmentedColormap
+    house = LinearSegmentedColormap.from_list("house", [PALETTE[0], "#D9D9D9", PALETTE[2]])
+    shap.summary_plot(values, X, show=False, max_display=15, cmap=house)
     fig = plt.gcf()
     fig.tight_layout()
     if path:
