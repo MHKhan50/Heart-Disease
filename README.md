@@ -195,6 +195,19 @@ Research code only. Not a medical device and not for diagnosis.
 
 ## Citation
 
+```bibtex
+@misc{hussain2026heart,
+  author    = {Hussain, Muzammal},
+  title     = {{Duplicates, Hospital Shift and Missingness Shortcuts: A Leakage Audit and Leave-One-Hospital-Out Re-evaluation of Machine Learning on the UCI Heart Disease Data}},
+  year      = {2026},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23841456},
+  url       = {https://doi.org/10.5281/zenodo.23841456}
+}
+```
+
+Software (code, notebooks, results): [doi:10.5281/zenodo.23833910](https://doi.org/10.5281/zenodo.23833910).
+
 Hussain, M. (2026). *Heart Disease Prediction V2: Leakage Audit and Leave-One-Hospital-Out Validation* (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.23833910
 
 See also [`CITATION.cff`](CITATION.cff). Please also cite the original data source:
